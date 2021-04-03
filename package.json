@@ -4,6 +4,11 @@
   "description": "Blockchain building blocks.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
+  "scripts": {
+    "prepare": "npm run build",
+    "build": "tsc",
+    "lint": "eslint src"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/mat-sz/eschain.git"
@@ -13,5 +18,8 @@
   },
   "homepage": "https://github.com/mat-sz/eschain",
   "author": "Mat Sz <contact@matsz.dev>",
-  "license": "BSD-3-Clause-Clear"
+  "license": "BSD-3-Clause-Clear",
+  "dependencies": {
+    "typescript": "^4.2.3"
+  }
 }
