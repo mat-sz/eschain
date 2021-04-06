@@ -16,10 +16,28 @@
   "bugs": {
     "url": "https://github.com/mat-sz/eschain/issues"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write"
+    ],
+    "__tests__/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write"
+    ]
+  },
   "homepage": "https://github.com/mat-sz/eschain",
   "author": "Mat Sz <contact@matsz.dev>",
   "license": "BSD-3-Clause-Clear",
   "dependencies": {
     "typescript": "^4.2.3"
+  },
+  "devDependencies": {
+    "husky": "^6.0.0",
+    "lint-staged": "^10.5.4",
+    "prettier": "^2.2.1"
   }
 }
